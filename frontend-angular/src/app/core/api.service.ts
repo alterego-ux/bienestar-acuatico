@@ -2,7 +2,7 @@ import { Injectable, inject } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpParams } from '@angular/common/http';
 import { firstValueFrom } from 'rxjs';
 
-export const API_URL = '/api';
+export const API_URL = 'https://bienestar-acuatico.onrender.com/api';
 
 export class ErrorApi extends Error {
   constructor(public codigo: string, mensaje: string, public estado = 0, public detalles?: unknown) { super(mensaje); }

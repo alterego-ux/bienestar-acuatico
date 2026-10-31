@@ -7,7 +7,12 @@ import { AuthService } from './auth.service';
 export const authInterceptor: HttpInterceptorFn = (req, next) => {
   const auth = inject(AuthService);
   const t = auth.token();
-  const r = t && req.url.startsWith('/api') ? req.clone({ setHeaders: { Authorization: 'Bearer ' + t } }) : req;
+  const esApi = req.url.startsWith('/api') ||
+  req.url.startsWith('https://bienestar-acuatico.onrender.com/api');
+
+const r = t && esApi
+  ? req.clone({ setHeaders: { Authorization: 'Bearer ' + t } })
+  : req;
   return next(r).pipe(
     catchError((e) => {
       if (e.status === 401 && !req.url.includes('/auth/login') && auth.logueado()) auth.logout();
