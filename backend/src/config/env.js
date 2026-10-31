@@ -74,6 +74,13 @@ export const config = {
     maxMB: aNumero(process.env.MAX_UPLOAD_MB, 15),
   },
 
+  // Almacenamiento persistente de evidencias (Supabase Storage).
+  storage: {
+    url: process.env.SUPABASE_URL || "",
+    secretKey: process.env.SUPABASE_SECRET_KEY || "",
+    bucket: process.env.SUPABASE_STORAGE_BUCKET || "evidencias",
+  },
+
   modoOfflinePermitido: aBooleano(process.env.MODO_OFFLINE_PERMITIDO, true),
 
   gemini: {
