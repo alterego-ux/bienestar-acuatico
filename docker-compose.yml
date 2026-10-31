@@ -1,0 +1,33 @@
+# =====================================================================
+#  PostgreSQL para el prototipo académico "Bienestar Acuático"
+#  (Metodología ICA v2.0 · 2024 — NO es un sistema oficial del ICA)
+# ---------------------------------------------------------------------
+#  Uso rápido:
+#    1) docker compose up -d db           # levanta PostgreSQL en localhost:5433 (no choca con el proyecto anterior)
+#    2) npm run dev                        # desde la raíz: prepara la base y levanta API + Angular
+#    (la API queda en http://localhost:4100 y Angular en http://localhost:4200)
+#
+#  Las credenciales coinciden con backend/.env.example. Si cambias
+#  POSTGRES_PASSWORD aquí, ajusta DATABASE_URL en backend/.env.
+# =====================================================================
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: bienestar_ejecutivo_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: bienestar_ejecutivo
+    ports:
+      - "5433:5432"
+    volumes:
+      - bienestar_ejecutivo_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d bienestar_ejecutivo"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+
+volumes:
+  bienestar_ejecutivo_pgdata:

@@ -1,0 +1,39 @@
+BIENESTAR ACUÁTICO — NEON AQUACULTURE
+=====================================
+
+Proyecto académico basado en la metodología ICA v2.0 (2024). No es un sistema oficial del ICA.
+
+MODO 1 · SOLO FRONTEND (rápido)
+  Abre index.html con doble clic. Es una aplicación web (HTML/CSS/JS) que guarda los datos en
+  localStorage e IndexedDB. No necesita backend ni base de datos.
+
+MODO 2 · CON BACKEND (Node.js + Express + PostgreSQL)
+  1) Levanta PostgreSQL:  docker compose up -d      (o usa tu PostgreSQL local)
+  2) cd backend
+     Copy-Item .env.example .env                    (cp en Linux/macOS)
+     npm install
+     npm run setup                                  (crea tablas + siembra catálogos y datos demo)
+     npm start                                       -> http://localhost:4000
+  3) Abre http://localhost:4000/  ·  estado de la API: /api/salud
+  Detalle completo en backend/README.md.
+
+USUARIOS DEMO (en ambos modos)
+  admin@ica.demo / admin123      docente@ica.demo / docente123
+  evaluador@ica.demo / 1234      consultor@ica.demo / consultor123
+
+FOTOGRAFÍAS
+  Im/peces/cardumen-ica.jpg  -> fondo del hero y tarjeta de la galería.
+  Im/sistemas/estanque-ica.jpg -> cabecera de la sección de sistemas y guía visual de la metodología.
+  Además hay fotos de Wikimedia Commons (requieren Internet). Autores y licencias en
+  docs/CREDITOS_IMAGENES.md. Las escenas gráficas sirven como respaldo si falla la carga.
+
+PRUEBAS
+  Frontend:  node tests/validation.js   y   python tests/check_assets.py
+  Backend:   cd backend && npm test
+
+METODOLOGÍA
+  docs/Metodologia_ICA_Bienestar_Peces_v2.pdf
+  Cambios de lógica, parámetros y advertencias: docs/REVISION_METODOLOGIA.md
+
+NOTA: Prototipo académico independiente. Las constancias e informes son simulaciones; no son
+documentos oficiales del ICA. No proceses datos reales ni lo publiques como servicio productivo.
