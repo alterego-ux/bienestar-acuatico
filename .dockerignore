@@ -1,0 +1,10 @@
+.git
+**/node_modules
+**/.angular
+**/dist
+**/.env
+**/.env.*
+**/uploads
+**/*.log
+.DS_Store
+Thumbs.db

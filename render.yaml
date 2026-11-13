@@ -1,0 +1,23 @@
+# Backend en Render (Docker). La base de datos puede ser Supabase (DATABASE_URL).
+services:
+  - type: web
+    name: bienestar-acuatico-api
+    runtime: docker
+    dockerContext: ./backend
+    dockerfilePath: ./backend/Dockerfile
+    healthCheckPath: /api/salud
+    envVars:
+      - { key: NODE_ENV, value: production }
+      - { key: PORT, value: "4100" }
+      - { key: PGSSL, value: "true" }
+      - { key: STORAGE_DRIVER, value: auto }
+      - { key: SUPABASE_STORAGE_BUCKET, value: evidencias }
+      - { key: JWT_EXPIRA, value: 8h }
+      - { key: MODO_OFFLINE_PERMITIDO, value: "true" }
+      - { key: DATABASE_URL, sync: false }
+      - { key: JWT_SECRET, generateValue: true }
+      - { key: CORS_ORIGEN, sync: false }
+      - { key: SUPABASE_URL, sync: false }
+      - { key: SUPABASE_SECRET_KEY, sync: false }
+      - { key: GEMINI_API_KEY, sync: false }
+      - { key: GEMINI_MODEL, sync: false }

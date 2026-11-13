@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Bienestar Acuático · Neon Aquaculture</title>
+<meta name="description" content="Prototipo académico de apoyo para evaluar el bienestar animal en peces de cultivo, basado en la metodología ICA v2.0 (2024). No es una herramienta oficial del ICA.">
+<meta name="theme-color" content="#06090b">
+<link rel="icon" href="Im/Logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/theme.css">
+</head>
+<body>
+
+<!-- Sprite del pez (lo usan las escenas animadas) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="fish" viewBox="0 0 120 50">
+      <path d="M6 25C26 4 70 2 98 25C70 48 26 46 6 25Z"/>
+      <path d="M92 25L118 6C112 18 112 32 118 44Z"/>
+      <path d="M44 9C54 1 70 1 80 9C68 8 56 8 44 9Z"/>
+      <circle cx="24" cy="21" r="2.4" fill="#000" fill-opacity=".45"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- Precarga -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="ld-top"><span>ICA</span><span>Metodología v2.0 · 2024</span></div>
+  <div class="ld-mid">
+    <div class="ld-num"><b id="ldn">0</b><i>%</i></div>
+    <div class="ld-word"><span>Bienestar</span><span class="o">Acuático</span></div>
+  </div>
+  <div class="ld-line"><u id="ldb"></u><svg class="ld-fish" id="ldf" viewBox="0 0 120 50"><use href="#fish"/></svg></div>
+</div>
+
+<!-- Cortina de transición entre páginas -->
+<div class="curtain" id="curtain" aria-hidden="true"><span>Bienestar Acuático</span></div>
+
+<!-- Cursor, progreso y volver arriba -->
+<div class="cur" id="cur" aria-hidden="true"></div>
+<div class="cur-dot" id="curd" aria-hidden="true"></div>
+<div class="prog" id="prog" aria-hidden="true"></div>
+
+<div id="app" aria-live="polite"></div>
+
+<button class="to-top" id="toTop" aria-label="Volver arriba" type="button">↑</button>
+
+<!-- Configuración y capa de acceso a la API (Node.js + Express + PostgreSQL) -->
+<script src="js/config.js"></script>
+<script src="js/api-client.js"></script>
+<script src="js/services/auth.service.js"></script>
+<script src="js/services/catalogo.service.js"></script>
+<script src="js/services/predio.service.js"></script>
+<script src="js/services/evaluacion.service.js"></script>
+<script src="js/services/calculo.service.js"></script>
+<script src="js/services/recomendacion.service.js"></script>
+<script src="js/services/evidencia.service.js"></script>
+<script src="js/services/reporte.service.js"></script>
+<script src="js/services/dashboard.service.js"></script>
+<script src="js/services/usuario.service.js"></script>
+<script src="js/adapters/persistence.js"></script>
+<!-- Datos, persistencia local y aplicación -->
+<script src="js/data.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/landing.js"></script>
+<script src="js/fx.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

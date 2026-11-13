@@ -1,0 +1,13 @@
+{
+  "name": "bienestar-acuatico",
+  "version": "3.0.0",
+  "private": true,
+  "description": "Bienestar Acuático · evaluación de bienestar animal en peces de cultivo (Metodología ICA v2.0). Proyecto nuevo e independiente: API + Angular.",
+  "engines": { "node": ">=22.22.3" },
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "setup": "node backend/src/db/ensure.js",
+    "build": "npm --prefix frontend-angular run build",
+    "test": "npm --prefix backend test"
+  }
+}

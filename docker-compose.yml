@@ -1,0 +1,87 @@
+name: bienestar-acuatico
+
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-bienestar_acuatico}
+      POSTGRES_USER: ${POSTGRES_USER:-bienestar}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Crea el archivo .env a partir de .env.docker.example}
+    ports:
+      - "127.0.0.1:8080:80"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U \"$${POSTGRES_USER}\" -d \"$${POSTGRES_DB}\""]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 10s
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      PORT: 4100
+      PGHOST: db
+      PGPORT: "5432"
+      PGUSER: ${POSTGRES_USER:-bienestar}
+      PGPASSWORD: ${POSTGRES_PASSWORD:?Define POSTGRES_PASSWORD en el archivo .env}
+      PGDATABASE: ${POSTGRES_DB:-bienestar_acuatico}
+      PGSSL: "false"
+      JWT_SECRET: ${JWT_SECRET:?Define JWT_SECRET en el archivo .env}
+      JWT_EXPIRA: ${JWT_EXPIRA:-8h}
+      CORS_ORIGEN: ${CORS_ORIGEN:-http://localhost:8080}
+      UPLOADS_DIR: /app/uploads
+      MAX_UPLOAD_MB: ${MAX_UPLOAD_MB:-15}
+      MODO_OFFLINE_PERMITIDO: ${MODO_OFFLINE_PERMITIDO:-false}
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      GEMINI_MODEL: ${GEMINI_MODEL:-gemini-3-flash-preview}
+      GEMINI_MAX_MESSAGE_CHARS: ${GEMINI_MAX_MESSAGE_CHARS:-2000}
+      GEMINI_RATE_LIMIT_PER_MINUTE: ${GEMINI_RATE_LIMIT_PER_MINUTE:-12}
+      SUPABASE_URL: ${SUPABASE_URL:-}
+      SUPABASE_SECRET_KEY: ${SUPABASE_SECRET_KEY:-}
+      SUPABASE_STORAGE_BUCKET: ${SUPABASE_STORAGE_BUCKET:-evidencias}
+      STORAGE_DRIVER: ${STORAGE_DRIVER:-auto}
+    expose:
+      - "4100"
+    volumes:
+      - backend_uploads:/app/uploads
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test:
+        - CMD
+        - node
+        - -e
+        - "fetch('http://127.0.0.1:4100/api/salud').then(async r => { const j = await r.json(); process.exit(r.ok && j?.datos?.baseDatos === 'conectada' ? 0 : 1); }).catch(() => process.exit(1))"
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  frontend:
+    build:
+      context: ./frontend-angular
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - "${WEB_HOST_PORT:-8080}:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q -O /dev/null http://127.0.0.1/ || exit 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+volumes:
+  postgres_data:
+  backend_uploads:

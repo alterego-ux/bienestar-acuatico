@@ -1,0 +1,1187 @@
+{
+  "metadatos": {
+    "generadoDesde": "js/data.js",
+    "generadoEn": "2026-10-17T13:56:14.430Z",
+    "metodologia": "ICA v2.0 (2024)",
+    "nota": "Prototipo académico. No es una herramienta oficial del ICA. 23 indicadores PMG / 15 AREL."
+  },
+  "departamentos": [
+    {
+      "nombre": "Cundinamarca",
+      "municipios": [
+        "Fusagasugá",
+        "Silvania",
+        "Girardot",
+        "Tocaima",
+        "La Mesa"
+      ]
+    },
+    {
+      "nombre": "Boyacá",
+      "municipios": [
+        "Tunja",
+        "Moniquirá",
+        "Garagoa",
+        "Miraflores"
+      ]
+    },
+    {
+      "nombre": "Meta",
+      "municipios": [
+        "Villavicencio",
+        "Granada",
+        "Acacías",
+        "Puerto López"
+      ]
+    },
+    {
+      "nombre": "Huila",
+      "municipios": [
+        "Neiva",
+        "Gigante",
+        "Garzón",
+        "Campoalegre"
+      ]
+    },
+    {
+      "nombre": "Tolima",
+      "municipios": [
+        "Ibagué",
+        "Espinal",
+        "Honda",
+        "Melgar"
+      ]
+    },
+    {
+      "nombre": "Antioquia",
+      "municipios": [
+        "Medellín",
+        "San Jerónimo",
+        "Santa Fe de Antioquia"
+      ]
+    },
+    {
+      "nombre": "Santander",
+      "municipios": [
+        "Bucaramanga",
+        "Barrancabermeja",
+        "San Gil"
+      ]
+    },
+    {
+      "nombre": "Valle del Cauca",
+      "municipios": [
+        "Cali",
+        "Palmira",
+        "Tuluá"
+      ]
+    },
+    {
+      "nombre": "Casanare",
+      "municipios": [
+        "Yopal",
+        "Aguazul"
+      ]
+    },
+    {
+      "nombre": "Cauca",
+      "municipios": [
+        "Popayán",
+        "Timbío"
+      ]
+    }
+  ],
+  "tiposProductor": [
+    {
+      "nombre": "Acuicultor de subsistencia",
+      "modalidad": "AREL"
+    },
+    {
+      "nombre": "Acuicultura de recursos limitados (AREL)",
+      "modalidad": "AREL"
+    },
+    {
+      "nombre": "Pequeño acuicultor",
+      "modalidad": "PMG"
+    },
+    {
+      "nombre": "Mediano acuicultor",
+      "modalidad": "PMG"
+    },
+    {
+      "nombre": "Gran acuicultor",
+      "modalidad": "PMG"
+    }
+  ],
+  "sistemas": [
+    {
+      "nombre": "Estanque",
+      "densidad_ref": "2 kg/m²"
+    },
+    {
+      "nombre": "IPRS (raceways en estanque)",
+      "densidad_ref": "15 kg/m³"
+    },
+    {
+      "nombre": "Jaulas flotantes",
+      "densidad_ref": "10 kg/m³"
+    },
+    {
+      "nombre": "RAS (recirculación)",
+      "densidad_ref": "10 kg/m³"
+    },
+    {
+      "nombre": "Biofloc",
+      "densidad_ref": ""
+    },
+    {
+      "nombre": "Tanques en geomembrana",
+      "densidad_ref": "7 kg/m³"
+    },
+    {
+      "nombre": "Integrado (acuaponía)",
+      "densidad_ref": ""
+    }
+  ],
+  "tiposMedida": [
+    {
+      "codigo": "MBR",
+      "nombre": "Recursos",
+      "descripcion": "Medidas basadas en los recursos",
+      "color": "#4aa3ff"
+    },
+    {
+      "codigo": "MBA",
+      "nombre": "Animal",
+      "descripcion": "Medidas basadas en el animal",
+      "color": "#2dd4a0"
+    },
+    {
+      "codigo": "MBG",
+      "nombre": "Gestión",
+      "descripcion": "Medidas basadas en la gestión",
+      "color": "#9b7bff"
+    }
+  ],
+  "modalidades": [
+    {
+      "codigo": "PMG",
+      "nombre": "Pequeños, medianos y grandes acuicultores",
+      "pesos": {
+        "MBR": 35,
+        "MBA": 35,
+        "MBG": 30
+      }
+    },
+    {
+      "codigo": "AREL",
+      "nombre": "Acuicultura de subsistencia y AREL",
+      "pesos": {
+        "MBR": 40,
+        "MBA": 40,
+        "MBG": 20
+      }
+    }
+  ],
+  "categorias": [
+    {
+      "nombre": "Bajo",
+      "min_pct": 0,
+      "max_pct": 50,
+      "color": "#ef5b5b",
+      "descripcion": "Deficiencias que requieren acciones a corto y mediano plazo."
+    },
+    {
+      "nombre": "Medio",
+      "min_pct": 50,
+      "max_pct": 75,
+      "color": "#f5b83d",
+      "descripcion": "Si no se corrige rápido, las afectaciones pueden deteriorar la condición de los animales."
+    },
+    {
+      "nombre": "Alto",
+      "min_pct": 75,
+      "max_pct": 90,
+      "color": "#4aa3ff",
+      "descripcion": "Buen bienestar, pero susceptible de ser mejorado."
+    },
+    {
+      "nombre": "Excelente",
+      "min_pct": 90,
+      "max_pct": 100,
+      "color": "#45e6d2",
+      "descripcion": "Bienestar óptimo, con indicadores de bienestar positivo."
+    }
+  ],
+  "libertades": [
+    {
+      "nombre": "Hambre, sed y mala nutrición",
+      "descripcion": "Alimento de calidad, bien distribuido y ajustado a la biomasa, con agua apta para la especie."
+    },
+    {
+      "nombre": "Molestias físicas y térmicas",
+      "descripcion": "Temperatura, ruido, vibraciones y profundidad dentro de rangos que no generen estrés."
+    },
+    {
+      "nombre": "Dolor, lesión y enfermedad",
+      "descripcion": "Piel, branquias y aletas sanas; captura, manejo y medicación responsables."
+    },
+    {
+      "nombre": "Temor y angustia",
+      "descripcion": "Procedimientos que reducen el miedo y personal capacitado en bienestar animal."
+    },
+    {
+      "nombre": "Manifestar un comportamiento natural",
+      "descripcion": "Espacio, profundidad y densidades que permiten al pez nadar y expresar su conducta natural."
+    }
+  ],
+  "indicadores": [
+    {
+      "codigo": "RE01",
+      "tipo_medida": "MBR",
+      "nombre": "Calidad del alimento",
+      "descripcion": "Hambre, sed y mala nutrición",
+      "pregunta": "¿El alimento es de calidad y se almacena con buenas prácticas?",
+      "metodo": "Inspección visual: almacenamiento y etiquetas",
+      "no_aplica": "",
+      "recomendacion": "Comprar solo alimento balanceado con registro ICA formulado para la especie y la etapa; almacenarlo sobre estibas, separado de la pared y con control de plagas.",
+      "aplica_pmg": true,
+      "aplica_arel": true,
+      "calculadora": null,
+      "orden": 0,
+      "libertades": [
+        "Hambre, sed y mala nutrición"
+      ],
+      "niveles": [
+        {
+          "puntaje": 100,
+          "descripcion": "Alimento balanceado con registro ICA para la etapa, sin mortalidad ni despojos y con buenas prácticas de almacenamiento"
+        },
+        {
+          "puntaje": 0,
+          "descripcion": "Incumple alguna condición: sin balanceado, sin registro, no es para la especie/etapa, se da mortalidad o se almacena mal"
+        }
+      ]
+    },
+    {
+      "codigo": "RE02",
+      "tipo_medida": "MBR",
+      "nombre": "Disponibilidad y acceso al alimento",
+      "descripcion": "Hambre, sed y mala nutrición",
+      "pregunta": "¿El alimento se distribuye donde los peces acceden y en horarios adecuados?",
+      "metodo": "Documental y visual al momento de alimentar",
+      "no_aplica": "",
+      "recomendacion": "Documentar y firmar el procedimiento de alimentación; distribuir el alimento lejos de la compuerta de salida, en zonas libres de plantas y en horarios de buen oxígeno.",
+      "aplica_pmg": true,
+      "aplica_arel": true,
+      "calculadora": null,
+      "orden": 1,
+      "libertades": [
+        "Hambre, sed y mala nutrición"
+      ],
+      "niveles": [
+        {
+          "puntaje": 100,
+          "descripcion": "Cumple todo: procedimiento escrito y firmado con registros, distribución adecuada, zona libre de plantas y con profundidad, horario con buen oxígeno y alimentadores funcionando"
+        },
+        {
+          "puntaje": 55,
+          "descripcion": "Cumple al menos 3 de las condiciones de distribución, zona, horario y alimentadores"
+        },
+        {
+          "puntaje": 20,
+          "descripcion": "Cumple al menos 2 condiciones"
+        },
+        {
+          "puntaje": 0,
+          "descripcion": "Cumple menos de 2 condiciones"
+        }
+      ]
+    },
+    {
+      "codigo": "RE03",
+      "tipo_medida": "MBR",
+      "nombre": "Ajuste de dietas",
+      "descripcion": "Hambre, sed y mala nutrición",
+      "pregunta": "¿Se ajustan las dietas periódicamente según la biomasa?",
+      "metodo": "Documental (registros de alimentación)",
+      "no_aplica": "",
+      "recomendacion": "Muestrear la biomasa al menos cada 30 días y ajustar la ración según peso promedio, biomasa y temperatura; registrar cada ajuste.",
+      "aplica_pmg": true,
+      "aplica_arel": true,
+      "calculadora": "dietas",
+      "orden": 2,
+      "libertades": [
+        "Hambre, sed y mala nutrición"
+      ],
+      "niveles": [
+        {
+          "puntaje": 100,
+          "descripcion": "Se ajusta en períodos menores a 30 días"
+        },
+        {
+          "puntaje": 55,
+          "descripcion": "Se ajusta entre 30 y 45 días"
+        },
+        {
+          "puntaje": 20,
+          "descripcion": "Se ajusta en períodos de más de 45 días"
+        },
+        {
+          "puntaje": 0,
+          "descripcion": "No se ajusta o no hay registros"
+        }
+      ]
+    },
+    {
+      "codigo": "RE04",
+      "tipo_medida": "MBR",
+      "nombre": "Calidad del agua",
+      "descripcion": "Hambre, sed y mala nutrición · Molestias físicas y térmicas",
+      "pregunta": "¿Cuál es la calidad del agua para la especie cultivada?",
+      "metodo": "Documental y visual de algunos espejos de agua",
+      "no_aplica": "",
+      "recomendacion": "Realizar los análisis de agua en el plazo exigido, llevar registros de temperatura, oxígeno, pH y turbidez y retirar de inmediato los peces muertos.",
+      "aplica_pmg": true,
+      "aplica_arel": true,
+      "calculadora": null,
+      "orden": 3,
+      "libertades": [
+        "Hambre, sed y mala nutrición",
+        "Molestias físicas y térmicas"
+      ],
+      "niveles": [
+        {
+          "puntaje": 100,
+          "descripcion": "Análisis fisicoquímicos y microbiológicos vigentes (< 6 meses; < 1 año en subsistencia y pequeños), registros de temperatura, turbidez, pH y oxígeno, espejos limpios sin peces muertos y correcciones aplicadas"
+        },
+        {
+          "puntaje": 0,
+          "descripcion": "Falta alguna de las condiciones anteriores"
+        }
+      ]
+    },
+    {
+      "codigo": "RE05",
+      "tipo_medida": "MBR",
+      "nombre": "Ausencia de ruido extremo y vibraciones",
+      "descripcion": "Molestias físicas y térmicas",
+      "pregunta": "¿Se controla el ruido generado por fuentes externas?",
+      "metodo": "Visual y entrevista con el productor",
+      "no_aplica": "",
+      "recomendacion": "Aislar o mantener motores, aireadores y bombas y garantizar al menos 16 horas diarias de quietud y calma.",
+      "aplica_pmg": true,
+      "aplica_arel": true,
+      "calculadora": null,
+      "orden": 4,
+      "libertades": [
+        "Molestias físicas y térmicas"
+      ],
+      "niveles": [
+        {
+          "puntaje": 100,
+          "descripcion": "Equipos sin ruido ni vibración y mínimo 16 horas de quietud y calma"
+        },
+        {
+          "puntaje": 55,
+          "descripcion": "Equipos ruidosos pero mínimo 12 horas de quietud"
+        },
+        {
+          "puntaje": 20,
+          "descripcion": "Equipos ruidosos pero mínimo 8 horas de quietud"
+        },
+        {
+          "puntaje": 0,
+          "descripcion": "Ruido excesivo y no se garantizan 8 horas de quietud"
+        }
+      ]
+    },
+    {
+      "codigo": "RE06",
+      "tipo_medida": "MBR",
+      "nombre": "Calidad del aire inyectado",
+      "descripcion": "Dolor, lesión y enfermedad · Molestias físicas y térmicas",
+      "pregunta": "¿Hay fuentes de contaminantes cerca de la toma de aire de sopladores o aireadores?",
+      "metodo": "Inspección visual",
+      "no_aplica": "No aplica si el predio no tiene sistema de inyección de aire o aireadores",
+      "recomendacion": "Alejar fuentes de humo y gases (estufas de leña, motores de combustión) de la toma de aire de sopladores y aireadores.",
+      "aplica_pmg": true,
+      "aplica_arel": false,
+      "calculadora": null,
+      "orden": 5,
+      "libertades": [
+        "Dolor, lesión y enfermedad",
+        "Molestias físicas y térmicas"
+      ],
+      "niveles": [
+        {
+          "puntaje": 100,
+          "descripcion": "No existen fuentes de contaminación del aire en el entorno"
+        },
+        {
+          "puntaje": 0,
+          "descripcion": "Se identifican fuentes de contaminación que afectan el aire tomado"
+        }
+      ]
+    },
+    {
+      "codigo": "RE07",
+      "tipo_medida": "MBR",
+      "nombre": "Proceso de captura de los peces",
+      "descripcion": "Dolor, lesión y enfermedad · Temor y angustia",
+      "pregunta": "¿Existe procedimiento de captura? ¿Es rápido y sin lesiones, sangre ni anzuelos?",
+      "metodo": "Documental o visual cuando corresponda",
+      "no_aplica": "",
+      "recomendacion": "Elaborar un procedimiento de captura con tiempos registrados, usar redes sin bordes cortantes, evitar el hacinamiento prolongado y no usar anzuelos.",
+      "aplica_pmg": true,
+      "aplica_arel": true,
+      "calculadora": null,
+      "orden": 6,
+      "libertades": [
+        "Dolor, lesión y enfermedad",
+        "Temor y angustia"
+      ],
+      "niveles": [
+        {
+          "puntaje": 100,
+          "descripcion": "Procedimiento con registros de tiempos cortos; captura rápida, sin lesiones, sin agua sanguinolenta y sin anzuelos"
+        },
+        {
+          "puntaje": 55,
+          "descripcion": "Sin procedimiento o registros, pero se observa captura rápida y sin lesiones ni anzuelos"
+        },
+        {
+          "puntaje": 20,
+          "descripcion": "Con procedimiento, pero captura prolongada, con lesiones o agua sanguinolenta"
+        },
+        {
+          "puntaje": 0,
+          "descripcion": "Sin procedimiento y captura deficiente, o uso de anzuelos"
+        }
+      ]
+    },
+    {
+      "codigo": "RE08",
+      "tipo_medida": "MBR",
+      "nombre": "Protección contra depredadores",
+      "descripcion": "Dolor, lesión y enfermedad · Temor y angustia",
+      "pregunta": "¿El sistema cuenta con protecciones contra depredadores?",
+      "metodo": "Inspección visual",
+      "no_aplica": "",
+      "recomendacion": "Instalar o reparar malla anti pájaro y cercos que impidan el ingreso de depredadores terrestres.",
+      "aplica_pmg": true,
+      "aplica_arel": true,
+      "calculadora": null,
+      "orden": 7,
+      "libertades": [
+        "Dolor, lesión y enfermedad",
+        "Temor y angustia"
+      ],
+      "niveles": [
+        {
+          "puntaje": 100,
+          "descripcion": "Protecciones en buen estado y funcionales"
+        },
+        {
+          "puntaje": 0,
+          "descripcion": "Sin protecciones o en mal estado"
+        }
+      ]
+    },
+    {
+      "codigo": "RE09",
+      "tipo_medida": "MBR",
+      "nombre": "Compatibilidad de policultivos",
+      "descripcion": "Dolor, lesión y enfermedad · Temor y angustia",
+      "pregunta": "¿Las especies del policultivo son compatibles y no se depredan?",
+      "metodo": "Visual y documental",
+      "no_aplica": "No aplica si no existe policultivo",
+      "recomendacion": "Revisar la compatibilidad de las especies del policultivo y separar las que presenten depredación o agresión.",
+      "aplica_pmg": true,
+      "aplica_arel": false,
+      "calculadora": null,
+      "orden": 8,
+      "libertades": [
+        "Dolor, lesión y enfermedad",
+        "Temor y angustia"
+      ],
+      "niveles": [
+        {
+          "puntaje": 100,
+          "descripcion": "Existe policultivo y las especies son compatibles"
+        },
+        {
+          "puntaje": 0,
+          "descripcion": "Existe policultivo y las especies son incompatibles"
+        }
+      ]
+    },
+    {
+      "codigo": "RE10",
+      "tipo_medida": "MBR",
+      "nombre": "Profundidad adecuada",
+      "descripcion": "Molestias físicas y térmicas · Temor y angustia · Comportamiento natural",
+      "pregunta": "¿El sistema tiene la profundidad apropiada para los animales?",
+      "metodo": "Visual con medición de la profundidad",
+      "no_aplica": "",
+      "recomendacion": "Verificar la profundidad conforme a la modalidad: PMG admite 2–5 m para jaulas; AREL utiliza el rango de 0,6–1,5 m establecido en la tabla 40. Aplicar y documentar medidas correctivas cuando corresponda.",
+      "aplica_pmg": true,
+      "aplica_arel": true,
+      "calculadora": "profundidad",
+      "orden": 9,
+      "libertades": [
+        "Molestias físicas y térmicas",
+        "Temor y angustia",
+        "Comportamiento natural"
+      ],
+      "niveles": [
+        {
+          "puntaje": 100,
+          "descripcion": "PMG: profundidad entre 0,6 y 1,5 m; si es jaula, entre 2 y 5 m. AREL: profundidad entre 0,6 y 1,5 m según tabla 40."
+        },
+        {
+          "puntaje": 55,
+          "descripcion": "Fuera del rango aplicable, pero se aplican medidas correctivas (ej. polisombra)"
+        },
+        {
+          "puntaje": 0,
+          "descripcion": "Fuera del rango aplicable y sin medidas correctivas"
+        }
+      ]
+    },
+    {
+      "codigo": "AN01",
+      "tipo_medida": "MBA",
+      "nombre": "Tamaño y peso de los peces",
+      "descripcion": "Hambre, sed y mala nutrición",
+      "pregunta": "¿Hay diferencia significativa de talla o peso entre peces del mismo lote?",
+      "metodo": "Visual sujeta a muestreo (mín. 15 peces por lote)",
+      "no_aplica": "",
+      "recomendacion": "Clasificar por tallas con más frecuencia y separar lotes para que más del 90% de los peces estén dentro del 10% del promedio.",
+      "aplica_pmg": true,
+      "aplica_arel": true,
+      "calculadora": "tamano",
+      "orden": 10,
+      "libertades": [
+        "Hambre, sed y mala nutrición"
+      ],
+      "niveles": [
+        {
+          "puntaje": 100,
+          "descripcion": "Más del 90% de los peces están en el promedio (± 10%)"
+        },
+        {
+          "puntaje": 55,
+          "descripcion": "Entre 80% y 90% en el promedio"
+        },
+        {
+          "puntaje": 20,
+          "descripcion": "Entre 70% y 79% en el promedio"
+        },
+        {
+          "puntaje": 0,
+          "descripcion": "Menos del 70% en el promedio"
+        }
+      ]
+    },
+    {
+      "codigo": "AN02",
+      "tipo_medida": "MBA",
+      "nombre": "Lesiones, heridas y problemas en piel, branquias y aletas",
+      "descripcion": "Dolor, lesión y enfermedad",
+      "pregunta": "¿Se evidencian daños en piel, branquias o aletas?",
+      "metodo": "Visual sujeta a muestreo (mín. 10 peces por lote)",
+      "no_aplica": "",
+      "recomendacion": "Revisar piel, branquias y aletas de forma periódica, corregir las causas de lesiones (manejo, densidad, calidad de agua) y consultar al MV/MVZ.",
+      "aplica_pmg": true,
+      "aplica_arel": true,
+      "calculadora": "lesiones",
+      "orden": 11,
+      "libertades": [
+        "Dolor, lesión y enfermedad"
+      ],
+      "niveles": [
+        {
+          "puntaje": 100,
+          "descripcion": "Menos del 5% de los peces con daños"
+        },
+        {
+          "puntaje": 55,
+          "descripcion": "Entre 5% y 10% con daños"
+        },
+        {
+          "puntaje": 20,
+          "descripcion": "Entre 11% y 20% con daños"
+        },
+        {
+          "puntaje": 0,
+          "descripcion": "Más del 20% con daños"
+        }
+      ]
+    },
+    {
+      "codigo": "AN03",
+      "tipo_medida": "MBA",
+      "nombre": "Muerte de peces por asfixia",
+      "descripcion": "Dolor, lesión y enfermedad · Temor y angustia",
+      "pregunta": "¿A los animales se les produce la muerte por asfixia?",
+      "metodo": "Documental y entrevista con el productor",
+      "no_aplica": "No aplica si no se puede verificar el sacrificio o hay planta de proceso en el predio",
+      "recomendacion": "Reemplazar el sacrificio por asfixia con aturdimiento por percusión o eléctrico, aplicado por personal capacitado.",
+      "aplica_pmg": true,
+      "aplica_arel": true,
+      "calculadora": null,
+      "orden": 12,
+      "libertades": [
+        "Dolor, lesión y enfermedad",
+        "Temor y angustia"
+      ],
+      "niveles": [
+        {
+          "puntaje": 100,
+          "descripcion": "No hay evidencia de muerte por asfixia"
+        },
+        {
+          "puntaje": 0,
+          "descripcion": "Se produce muerte por asfixia"
+        }
+      ]
+    },
+    {
+      "codigo": "AN04",
+      "tipo_medida": "MBA",
+      "nombre": "Tiempo de manipulación de los peces",
+      "descripcion": "Dolor, lesión y enfermedad · Temor y angustia",
+      "pregunta": "¿La manipulación fuera del agua es rápida y evita golpes y lesiones?",
+      "metodo": "Inspección visual",
+      "no_aplica": "",
+      "recomendacion": "Reducir el tiempo fuera del agua, acercar el punto de manipulación y capacitar al personal para evitar golpes.",
+      "aplica_pmg": true,
+      "aplica_arel": true,
+      "calculadora": null,
+      "orden": 13,
+      "libertades": [
+        "Dolor, lesión y enfermedad",
+        "Temor y angustia"
+      ],
+      "niveles": [
+        {
+          "puntaje": 100,
+          "descripcion": "Manipulación rápida, sin sobreexposición, golpes ni lesiones"
+        },
+        {
+          "puntaje": 0,
+          "descripcion": "Manipulación demorada o sin prevenir golpes y lesiones"
+        }
+      ]
+    },
+    {
+      "codigo": "AN05",
+      "tipo_medida": "MBA",
+      "nombre": "Separación y clasificación por lotes",
+      "descripcion": "Hambre, sed y mala nutrición · Dolor, lesión y enfermedad · Temor y angustia",
+      "pregunta": "¿Existe separación de lotes homogéneos?",
+      "metodo": "Documental y visual",
+      "no_aplica": "",
+      "recomendacion": "Implementar un sistema de separación de lotes homogéneos por talla o edad y programar las clasificaciones.",
+      "aplica_pmg": true,
+      "aplica_arel": false,
+      "calculadora": null,
+      "orden": 14,
+      "libertades": [
+        "Hambre, sed y mala nutrición",
+        "Dolor, lesión y enfermedad",
+        "Temor y angustia"
+      ],
+      "niveles": [
+        {
+          "puntaje": 100,
+          "descripcion": "Hay sistema de separación y los lotes se observan homogéneos"
+        },
+        {
+          "puntaje": 55,
+          "descripcion": "Sin sistema, pero lotes separados y homogéneos"
+        },
+        {
+          "puntaje": 20,
+          "descripcion": "Hay sistema, pero no se evidencia separación u homogeneidad"
+        },
+        {
+          "puntaje": 0,
+          "descripcion": "Sin sistema, sin separación y lotes no homogéneos"
+        }
+      ]
+    },
+    {
+      "codigo": "AN06",
+      "tipo_medida": "MBA",
+      "nombre": "Densidad poblacional",
+      "descripcion": "Molestias físicas y térmicas · Hambre, sed y mala nutrición · Comportamiento natural",
+      "pregunta": "¿La densidad es adecuada para la especie, la etapa y el sistema?",
+      "metodo": "Documental y visual",
+      "no_aplica": "",
+      "recomendacion": "Reducir la densidad a la referencia del sistema, verificar oxígeno y recambio de agua y llevar registro de biomasa.",
+      "aplica_pmg": true,
+      "aplica_arel": true,
+      "calculadora": null,
+      "orden": 15,
+      "libertades": [
+        "Molestias físicas y térmicas",
+        "Hambre, sed y mala nutrición",
+        "Comportamiento natural"
+      ],
+      "niveles": [
+        {
+          "puntaje": 100,
+          "descripcion": "Densidad igual o menor a la referencia y sin actividad vigorosa, boqueo ni letargia"
+        },
+        {
+          "puntaje": 55,
+          "descripcion": "Densidad igual o menor a la referencia pero con cierto boqueo o actividad vigorosa"
+        },
+        {
+          "puntaje": 20,
+          "descripcion": "Densidad mayor a la referencia con boqueo y salpicaduras vigorosas"
+        },
+        {
+          "puntaje": 0,
+          "descripcion": "Densidad mayor a la referencia con salpicaduras violentas o bloqueo, o sin registros de biomasa"
+        }
+      ]
+    },
+    {
+      "codigo": "GE01",
+      "tipo_medida": "MBG",
+      "nombre": "Uso de medicamentos",
+      "descripcion": "Dolor, lesión y enfermedad",
+      "pregunta": "¿Se cumplen las buenas prácticas de uso de medicamentos veterinarios?",
+      "metodo": "Documental y visual del sitio de almacenamiento",
+      "no_aplica": "",
+      "recomendacion": "Usar solo medicamentos con registro ICA, prescritos por MV/MVZ, vigentes y bien almacenados; llevar registro de tratamientos.",
+      "aplica_pmg": true,
+      "aplica_arel": false,
+      "calculadora": null,
+      "orden": 16,
+      "libertades": [
+        "Dolor, lesión y enfermedad"
+      ],
+      "niveles": [
+        {
+          "puntaje": 100,
+          "descripcion": "Se cumplen todas las buenas prácticas"
+        },
+        {
+          "puntaje": 55,
+          "descripcion": "Registro ICA, sin sustancias prohibidas, prescritos por MV/MVZ y con registros, pero falla otra práctica"
+        },
+        {
+          "puntaje": 0,
+          "descripcion": "Sin registro ICA, con sustancias prohibidas, sin prescripción o sin registro de tratamientos"
+        }
+      ]
+    },
+    {
+      "codigo": "GE02",
+      "tipo_medida": "MBG",
+      "nombre": "Porcentaje de mortalidad del establecimiento",
+      "descripcion": "Dolor, lesión y enfermedad",
+      "pregunta": "¿Cuál es el porcentaje de mortalidad de los últimos 12 meses?",
+      "metodo": "Documental (12 meses) y visual de los espejos",
+      "no_aplica": "",
+      "recomendacion": "Llevar registro mensual de mortalidad, identificar causas y aplicar medidas de control (densidad, nutrición, diagnóstico).",
+      "aplica_pmg": true,
+      "aplica_arel": true,
+      "calculadora": "mortalidad",
+      "orden": 17,
+      "libertades": [
+        "Dolor, lesión y enfermedad"
+      ],
+      "niveles": [
+        {
+          "puntaje": 100,
+          "descripcion": "Cachama ≤ 1% · otras especies ≤ 10%"
+        },
+        {
+          "puntaje": 55,
+          "descripcion": "Cachama 1,1–2% · otras 11–12%"
+        },
+        {
+          "puntaje": 20,
+          "descripcion": "Cachama 2,1–3% · otras 13–15%"
+        },
+        {
+          "puntaje": 0,
+          "descripcion": "Cachama > 3% · otras > 15%, sin registros o peces muertos visibles"
+        }
+      ]
+    },
+    {
+      "codigo": "GE03",
+      "tipo_medida": "MBG",
+      "nombre": "Plan sanitario escrito e implementado",
+      "descripcion": "Dolor, lesión y enfermedad",
+      "pregunta": "¿El establecimiento tiene un plan sanitario implementado?",
+      "metodo": "Inspección documental",
+      "no_aplica": "",
+      "recomendacion": "Elaborar con un MV/MVZ con matrícula vigente un plan sanitario escrito, mantenerlo actualizado y cumplirlo en su totalidad.",
+      "aplica_pmg": true,
+      "aplica_arel": false,
+      "calculadora": null,
+      "orden": 18,
+      "libertades": [
+        "Dolor, lesión y enfermedad"
+      ],
+      "niveles": [
+        {
+          "puntaje": 100,
+          "descripcion": "Plan actualizado, implementado y cumplido totalmente"
+        },
+        {
+          "puntaje": 55,
+          "descripcion": "Actualizado e implementado, cumplido parcialmente"
+        },
+        {
+          "puntaje": 20,
+          "descripcion": "Plan no actualizado y cumplido parcialmente"
+        },
+        {
+          "puntaje": 0,
+          "descripcion": "Sin plan, no se cumple o no lo firma un MV/MVZ con matrícula vigente"
+        }
+      ]
+    },
+    {
+      "codigo": "GE04",
+      "tipo_medida": "MBG",
+      "nombre": "Uso de anestesia en procesos habituales",
+      "descripcion": "Dolor, lesión y enfermedad",
+      "pregunta": "¿Se usa anestesia en los procesos habituales (clasificación, muestreo, vacunación)?",
+      "metodo": "Inspección documental",
+      "no_aplica": "",
+      "recomendacion": "Usar anestesia en clasificación, muestreo y procedimientos, bajo prescripción de MV/MVZ y con registro.",
+      "aplica_pmg": true,
+      "aplica_arel": false,
+      "calculadora": null,
+      "orden": 19,
+      "libertades": [
+        "Dolor, lesión y enfermedad"
+      ],
+      "niveles": [
+        {
+          "puntaje": 100,
+          "descripcion": "Se usa y se llevan registros de tratamientos"
+        },
+        {
+          "puntaje": 55,
+          "descripcion": "Se usa pero no se llevan registros"
+        },
+        {
+          "puntaje": 0,
+          "descripcion": "No se usa"
+        }
+      ]
+    },
+    {
+      "codigo": "GE05",
+      "tipo_medida": "MBG",
+      "nombre": "Conocimiento y capacitación en bienestar animal",
+      "descripcion": "Temor y angustia",
+      "pregunta": "¿El personal conoce el bienestar animal y tiene certificados?",
+      "metodo": "Documental y entrevista al personal",
+      "no_aplica": "",
+      "recomendacion": "Capacitar a todo el personal en bienestar animal y conservar los certificados de asistencia.",
+      "aplica_pmg": true,
+      "aplica_arel": true,
+      "calculadora": "capacitacion",
+      "orden": 20,
+      "libertades": [
+        "Temor y angustia"
+      ],
+      "niveles": [
+        {
+          "puntaje": 100,
+          "descripcion": "Todas las personas demuestran conocimiento y tienen certificación escrita"
+        },
+        {
+          "puntaje": 55,
+          "descripcion": "Más del 50% con conocimiento y certificado, o 100% con conocimiento pero sin certificado"
+        },
+        {
+          "puntaje": 20,
+          "descripcion": "Más del 50% con conocimiento y sin certificado"
+        },
+        {
+          "puntaje": 0,
+          "descripcion": "Menos del 50% con conocimiento y sin certificación"
+        }
+      ]
+    },
+    {
+      "codigo": "GE06",
+      "tipo_medida": "MBG",
+      "nombre": "Procedimiento de manejo de los animales",
+      "descripcion": "Dolor, lesión y enfermedad · Temor y angustia",
+      "pregunta": "¿Hay procedimientos documentados e implementados para el manejo?",
+      "metodo": "Documental (y visual si hay actividad en curso)",
+      "no_aplica": "",
+      "recomendacion": "Documentar los procedimientos de manejo (manipulación, movilización, regreso al agua, animales moribundos) y conservar los registros de su aplicación.",
+      "aplica_pmg": true,
+      "aplica_arel": false,
+      "calculadora": null,
+      "orden": 21,
+      "libertades": [
+        "Dolor, lesión y enfermedad",
+        "Temor y angustia"
+      ],
+      "niveles": [
+        {
+          "puntaje": 100,
+          "descripcion": "Todos los procedimientos escritos con registros y ejecución correcta observada"
+        },
+        {
+          "puntaje": 55,
+          "descripcion": "Falta algún procedimiento o registro, pero la ejecución observada es correcta"
+        },
+        {
+          "puntaje": 20,
+          "descripcion": "Procedimientos y registros completos, pero se observa incumplimiento"
+        },
+        {
+          "puntaje": 0,
+          "descripcion": "Sin procedimientos ni registros y se observa incumplimiento"
+        }
+      ]
+    },
+    {
+      "codigo": "GE07",
+      "tipo_medida": "MBG",
+      "nombre": "Sacrificio humanitario",
+      "descripcion": "Dolor, lesión y enfermedad",
+      "pregunta": "¿Hay procedimiento y registro de sacrificio con un método aceptado?",
+      "metodo": "Inspección documental",
+      "no_aplica": "",
+      "recomendacion": "Documentar el procedimiento de sacrificio humanitario (percusión o aturdimiento eléctrico) y llevar registro de cada sacrificio.",
+      "aplica_pmg": true,
+      "aplica_arel": false,
+      "calculadora": null,
+      "orden": 22,
+      "libertades": [
+        "Dolor, lesión y enfermedad"
+      ],
+      "niveles": [
+        {
+          "puntaje": 100,
+          "descripcion": "Procedimiento o registro y sacrificio con método aceptado (percusión o aturdimiento eléctrico), o no hubo sacrificio en el último año"
+        },
+        {
+          "puntaje": 0,
+          "descripcion": "Sin procedimiento o registro, o sacrificio sin método aceptado"
+        }
+      ]
+    }
+  ],
+  "especies": [
+    {
+      "codigo": "cachama",
+      "nombre_comun": "Cachama",
+      "nombre_cientifico": "Especie nativa de la Orinoquía y la Amazonía, clave para la economía regional. Es la más exigente en mortalidad.",
+      "tipo_agua": "Nativa",
+      "temp_min": 24,
+      "temp_max": 29,
+      "od_min": 4,
+      "ph_min": 6.5,
+      "turbidez_ref": "30 cm",
+      "turbidez_aplica": true,
+      "mortalidad_100": 1,
+      "mortalidad_55": 2,
+      "mortalidad_20": 3,
+      "mortalidad_txt": "≤ 1% (100 pts)",
+      "activo": true
+    },
+    {
+      "codigo": "tilapia",
+      "nombre_comun": "Tilapia",
+      "nombre_cientifico": "La especie de mayor producción comercial en Colombia",
+      "tipo_agua": "Aguas cálidas",
+      "temp_min": 24,
+      "temp_max": 32,
+      "od_min": 4,
+      "ph_min": 6,
+      "turbidez_ref": "25 cm",
+      "turbidez_aplica": true,
+      "mortalidad_100": 10,
+      "mortalidad_55": 12,
+      "mortalidad_20": 15,
+      "mortalidad_txt": "≤ 10% (100 pts)",
+      "activo": true
+    },
+    {
+      "codigo": "trucha",
+      "nombre_comun": "Trucha",
+      "nombre_cientifico": "Exige agua fría y muy oxigenada",
+      "tipo_agua": "Aguas frías",
+      "temp_min": 10,
+      "temp_max": 16,
+      "od_min": 8,
+      "ph_min": 7,
+      "turbidez_ref": "Cristalina - 45 cm",
+      "turbidez_aplica": true,
+      "mortalidad_100": 10,
+      "mortalidad_55": 12,
+      "mortalidad_20": 15,
+      "mortalidad_txt": "≤ 10% (100 pts)",
+      "activo": true
+    },
+    {
+      "codigo": "otra",
+      "nombre_comun": "Otra especie de pez",
+      "nombre_cientifico": "",
+      "tipo_agua": "",
+      "temp_min": null,
+      "temp_max": null,
+      "od_min": null,
+      "ph_min": null,
+      "turbidez_ref": "Según especie",
+      "turbidez_aplica": true,
+      "mortalidad_100": 10,
+      "mortalidad_55": 12,
+      "mortalidad_20": 15,
+      "mortalidad_txt": "≤ 10% (100 pts)",
+      "activo": true
+    }
+  ],
+  "reglasMuestreo": [
+    {
+      "modalidad": "PMG",
+      "min_lotes": 1,
+      "max_lotes": 3,
+      "lotes_a_muestrear": null,
+      "nota": "Menos de 4 lotes: se evalúan todos (valor nulo = todos)."
+    },
+    {
+      "modalidad": "PMG",
+      "min_lotes": 4,
+      "max_lotes": 9,
+      "lotes_a_muestrear": 3,
+      "nota": "De 4 a 9 lotes: se evalúan 3."
+    },
+    {
+      "modalidad": "PMG",
+      "min_lotes": 10,
+      "max_lotes": null,
+      "lotes_a_muestrear": 4,
+      "nota": "Más de 9 lotes: se evalúan 4."
+    },
+    {
+      "modalidad": "AREL",
+      "min_lotes": 1,
+      "max_lotes": 3,
+      "lotes_a_muestrear": null,
+      "nota": "Tabla 30: con menos de cuatro lotes se evalúan todos (valor nulo = todos)."
+    },
+    {
+      "modalidad": "AREL",
+      "min_lotes": 4,
+      "max_lotes": null,
+      "lotes_a_muestrear": null,
+      "nota": "La tabla 30 consultada solo documenta el caso de menos de cuatro lotes; el criterio para 4 o más requiere verificación metodológica."
+    }
+  ],
+  "reglasProfundidad": [
+    {
+      "modalidad": "PMG",
+      "es_jaula": false,
+      "min_m": 0.6,
+      "max_m": 1.5,
+      "nota": "Rango general de referencia."
+    },
+    {
+      "modalidad": "PMG",
+      "es_jaula": true,
+      "min_m": 2,
+      "max_m": 5,
+      "nota": "Tabla 13: jaulas 2–5 m."
+    },
+    {
+      "modalidad": "AREL",
+      "es_jaula": false,
+      "min_m": 0.6,
+      "max_m": 1.5,
+      "nota": "Tabla 40: 0,6–1,5 m."
+    }
+  ],
+  "reglasMortalidad": [
+    {
+      "especie": "cachama",
+      "modalidad": null,
+      "umbral_100": 1,
+      "umbral_55": 2,
+      "umbral_20": 3
+    },
+    {
+      "especie": "tilapia",
+      "modalidad": null,
+      "umbral_100": 10,
+      "umbral_55": 12,
+      "umbral_20": 15
+    },
+    {
+      "especie": "trucha",
+      "modalidad": null,
+      "umbral_100": 10,
+      "umbral_55": 12,
+      "umbral_20": 15
+    },
+    {
+      "especie": "otra",
+      "modalidad": null,
+      "umbral_100": 10,
+      "umbral_55": 12,
+      "umbral_20": 15
+    }
+  ],
+  "etapas": [
+    [
+      "I",
+      "Reunión inicial",
+      "Planeación con el responsable del predio: información básica, tamaño de muestra y selección de lotes."
+    ],
+    [
+      "II",
+      "Inspección del predio",
+      "Recorrido de espacios, recursos y estado general de los animales, respetando la bioseguridad."
+    ],
+    [
+      "III",
+      "Inspección documental",
+      "Registros, procedimientos y firmas, contrastados con lo observado durante el recorrido."
+    ],
+    [
+      "IV",
+      "Procesamiento y entrega",
+      "Tabulación de los indicadores y entrega de la calificación final del predio."
+    ]
+  ],
+  "roles": [
+    {
+      "codigo": "admin",
+      "nombre": "Administrador",
+      "descripcion": "Gestiona usuarios, roles, catálogos, especies y parámetros; acceso total."
+    },
+    {
+      "codigo": "docente",
+      "nombre": "Docente",
+      "descripcion": "Parametriza listas de chequeo, revisa y valida evaluaciones."
+    },
+    {
+      "codigo": "evaluador",
+      "nombre": "Estudiante evaluador",
+      "descripcion": "Registra predios y realiza evaluaciones en campo."
+    },
+    {
+      "codigo": "consultor",
+      "nombre": "Consultor externo",
+      "descripcion": "Solo consulta resultados e informes."
+    }
+  ]
+}
